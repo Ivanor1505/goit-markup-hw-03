@@ -1,0 +1,328 @@
+/* =========== ЗАГАЛЬНІ СТИЛІ ========== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+:root {
+    --primery-brand-color: #4D5AE5;
+    --pressed-state-color: #404BBF;
+    --dark-color: #2E2F42;
+    --succes-color: #31D0AA;
+    --text-color: #434455;
+    --subtle-text-color: #8E8F99;
+    --accent-color: #E7E9FC;
+    --light-color: #F4F4FD;
+    --modal-overlay-color: #2E2F42;
+    --hero-background-color: #2E2F42;
+    --primery-bcg-color: #FFFFFF;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--primery-bcg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.section-title {
+    color: var(--dark-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.item-title {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: tomato; */
+}
+
+
+/**!=========== СТИЛІ ДЛЯ index.html ========== */
+/* =========== ШАПКА САЙТУ ========== */
+/* .page-header {
+    background-color: tomato;
+} */
+.page-header {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.page-header-container,
+.site-nav,
+.nav,
+.cont.list {
+    display: flex;
+    align-items: center;
+}
+
+.page-header-container {
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.mail,
+.nav-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    color: var(--dark-color);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    margin-right: 76px;
+}
+
+.logo:hover,
+.logo:focus {
+    color: var(--pressed-state-color);
+}
+
+.part-logo {
+    color: var(--primery-brand-color);
+}
+
+.part-logo:hover,
+.part-logo:focus {
+    color: var(--dark-color);
+}
+
+/* =========== НАВІГАЦІЯ ========== */
+.site-nav .link {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contacts .link:hover,
+.contacts .link:focus {
+    color: var(--pressed-state-color);
+}
+
+/* =========== КОНТАКТНІ ДАННІ ========== */
+.contacts .link {
+    color: var(--text-color);
+}
+
+
+/* =========== ОСНОВНИЙ КОНТЕНТ ========== */
+
+/* =========== СЕКЦІЯ ГЕРОЙ ========== */
+.hero {
+    text-align: center;
+    background-color: var(--hero-background-color);
+    padding: 188px;
+
+}
+
+.primary-title {
+    color: var(--primery-bcg-color);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.071;
+    text-align: center;
+    margin: 0 auto 48px;
+    width: 496px;
+
+}
+
+.order-button {
+    display: inline-block;
+    padding: 16px 32px;
+    min-width: 170px;
+    border-radius: 4px;
+    background-color: var(--primery-brand-color);
+    border: 2px solid transparent;
+
+    text-align: center;
+    color: var(--primery-bcg-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+
+}
+
+.order-button:hover,
+.order-button:focus {
+    background-color: var(--pressed-state-color);
+}
+
+/* =========== ПЕРЕЛІК ПЕРЕВАГ ========== */
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.ghost {
+    display: none
+}
+
+.pref-list {
+    display: flex;
+
+}
+
+.pref-item:not(:last-child) {
+    margin-right: 24px;
+}
+
+/* =========== НАШІ ПРОЕКТИ ==========  */
+.proj-list {
+    display: flex;
+}
+
+.proj-item:not(:last-child) {
+    margin-right: 24px;
+}
+
+/* =========== ЧЛЕНИ КОМАНДИ ========== */
+.team-list {
+    display: flex;
+    text-align-last: center;
+}
+
+.team-member:not(:last-child) {
+    margin-right: 24px;
+}
+
+.team {
+    background-color: var(--light-color);
+}
+
+
+
+/* =========== ПІДВАЛ ========== */
+.page-footer {
+    background-color: var(--modal-overlay-color);
+    color: var(--accent-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.page-footer .link,
+.page-footer .part-logo:hover,
+.page-footer .part-logo:focus {
+    color: var(--light-color);
+}
+
+.page-footer .link:hover,
+.page-footer .link:focus {
+    color: var(--primery-brand-color);
+}
+
+.text-footer {
+    margin-top: 16px;
+    width: 264px;
+}
+
+/**! =========== СТИЛІ ДЛЯ portfolio.html ========= */
+/* ========== Список можливостей ========= */
+
+.cap-list {
+    display: flex;
+    margin-top: 96px;
+    margin-bottom: 72px;
+    justify-content: center;
+}
+
+.cap-filter:not(:last-child) {
+    margin-right: 24px;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.portfolio-item {
+    flex-basis: calc(100%-48px)/3;
+}
+
+.photo-decor {
+    border: 1px solid var(--accent-color);
+    border-top: none;
+    padding: 32px;
+}
+
+.filter-button {
+    width: 112px;
+    height: 48px;
+
+    background-color: var(--light-color);
+    color: var(--primery-brand-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    background-color: var(--pressed-state-color);
+    color: var(--primery-bcg-color);
+}
