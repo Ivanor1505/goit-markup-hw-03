@@ -45,6 +45,7 @@ img {
     --modal-overlay-color: #2E2F42;
     --hero-background-color: #2E2F42;
     --primery-bcg-color: #FFFFFF;
+    --card-set-gap: 24px
 }
 
 .list {
@@ -87,15 +88,12 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    /* background-color: tomato; */
 }
 
 
 /**!=========== СТИЛІ ДЛЯ index.html ========== */
 /* =========== ШАПКА САЙТУ ========== */
-/* .page-header {
-    background-color: tomato;
-} */
+
 .page-header {
     border-bottom: 1px solid var(--accent-color);
 }
@@ -110,8 +108,8 @@ body {
 
 .page-header-container {
     justify-content: space-between;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: var(--card-set-gap);
+    padding-bottom: var(--card-set-gap);
 }
 
 .mail,
@@ -164,14 +162,14 @@ body {
 }
 
 
-/* =========== ОСНОВНИЙ КОНТЕНТ ========== */
+/* !=========== ОСНОВНИЙ КОНТЕНТ ========== */
 
 /* =========== СЕКЦІЯ ГЕРОЙ ========== */
 .hero {
     text-align: center;
     background-color: var(--hero-background-color);
-    padding: 188px;
-
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .primary-title {
@@ -213,6 +211,10 @@ body {
     padding-bottom: 120px;
 }
 
+.preference {
+    padding-bottom: 0;
+}
+
 .ghost {
     display: none
 }
@@ -223,7 +225,7 @@ body {
 }
 
 .pref-item:not(:last-child) {
-    margin-right: 24px;
+    margin-right: var(--card-set-gap);
 }
 
 /* =========== НАШІ ПРОЕКТИ ==========  */
@@ -232,7 +234,7 @@ body {
 }
 
 .proj-item:not(:last-child) {
-    margin-right: 24px;
+    margin-right: var(--card-set-gap);
 }
 
 /* =========== ЧЛЕНИ КОМАНДИ ========== */
@@ -242,7 +244,7 @@ body {
 }
 
 .team-member:not(:last-child) {
-    margin-right: 24px;
+    margin-right: var(--card-set-gap);
 }
 
 .team {
@@ -286,18 +288,25 @@ body {
 }
 
 .cap-filter:not(:last-child) {
-    margin-right: 24px;
+    margin-right: var(--card-set-gap);
 }
 
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
+    /* margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-2 * var(--card-set-gap)); */
+    row-gap: calc(2*var(--card-set-gap));
+    column-gap: var(--card-set-gap);
+    padding-bottom: 120px;
 }
 
 .portfolio-item {
-    flex-basis: calc(100%-48px)/3;
+    /* flex-basis: calc(100%/ 3 - var(--card-set-gap)); */
+    /* margin-left: var(--card-set-gap);
+    margin-top: calc(2 * var(--card-set-gap)); */
+    flex-basis: calc(100%-(2*var(--card-set-gap))/3);
+    /* flex-basis: calc(100%/3 - var(--card-set-gap)); */
 }
 
 .photo-decor {
