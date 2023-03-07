@@ -288,10 +288,13 @@ body {
 
 /**! =========== СТИЛІ ДЛЯ portfolio.html ========= */
 /* ========== Список можливостей ========= */
+.capability {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
 
 .cap-list {
     display: flex;
-    margin-top: 96px;
     margin-bottom: 72px;
     justify-content: center;
 }
@@ -301,13 +304,17 @@ body {
 }
 
 .portfolio-list {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
     display: flex;
     flex-wrap: wrap;
     /* margin-left: calc(-1 * var(--card-set-gap));
     margin-top: calc(-2 * var(--card-set-gap)); */
     row-gap: calc(2*var(--card-set-gap));
     column-gap: var(--card-set-gap);
-    padding-bottom: 120px;
 }
 
 .portfolio-item {
@@ -319,9 +326,11 @@ body {
 }
 
 .photo-decor {
+    color: var(--text-color);
     border: 1px solid var(--accent-color);
     border-top: none;
     padding: 32px;
+    background-color: var(--primery-bcg-color);
 }
 
 .filter-button {
